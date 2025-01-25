@@ -18,8 +18,14 @@ const BREAK_TIME = 5 * 60; // 5 minutes in seconds
 function updateDisplay(timeLeft) {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    minutesDisplay.textContent = minutes.toString().padStart(2, '0');
-    secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    const formattedMinutes = minutes.toString().padStart(2, '0');
+    const formattedSeconds = seconds.toString().padStart(2, '0');
+    
+    minutesDisplay.textContent = formattedMinutes;
+    secondsDisplay.textContent = formattedSeconds;
+    
+    // Update the page title without parentheses
+    document.title = `${formattedMinutes}:${formattedSeconds} Pomodoro Timer`;
 }
 
 function toggleMode() {
