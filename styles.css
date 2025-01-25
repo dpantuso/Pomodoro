@@ -1,0 +1,172 @@
+:root {
+    --primary: #2D3250;
+    --secondary: #424769;
+    --accent: #7077A1;
+    --light: #F6B17A;
+    --background: #f7f8fa;
+    --white: #ffffff;
+    --text: #2c3e50;
+    --error: #e74c3c;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    text-align: center;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.time-display {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.time-adjust {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.time-adjust:hover {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.controls button {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.controls button#reset {
+    background-color: var(--error);
+}
+
+.controls button#reset:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.controls button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.mode {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.5rem 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    transition: .3s ease-in-out;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    transition: .3s ease-in-out;
+}
+
+input:checked + .slider {
+    background-color: var(--light);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 30px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#toggle-label {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 500;
+} 
