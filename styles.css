@@ -169,4 +169,70 @@ input:checked + .slider:before {
     font-size: 0.9rem;
     color: var(--accent);
     font-weight: 500;
+}
+
+.task-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-modal-content {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.task-modal-content h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.task-modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.task-modal-content button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.current-task {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--background);
+    border-radius: 8px;
+}
+
+.current-task p:first-child {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.current-task p:last-child {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
 } 
